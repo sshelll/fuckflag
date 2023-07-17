@@ -28,13 +28,13 @@ var (
 
 func main() {
 	fuckflag.Parse()
-  if *version {
+	if *version {
 		println("v0.0.1")
 	}
 	if *echo != "" {
 		println("echo: " + *echo)
 	}
-  // call this func to get undefined flags
+	// call this func to get undefined flags
 	exts := fuckflag.Extends()
 	fmt.Printf("fuckflag.Extends() size=%d, value=%v\n\n", len(exts), exts)
 }
