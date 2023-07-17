@@ -15,6 +15,10 @@ flag provided but not defined: -xxx
 So I modified the src code, and that's how `fuckflag` was born.
 
 
+## Install
+`go get -u github.com/sshelll/fuckflag`
+
+
 
 ## Demo
 
