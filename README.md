@@ -40,7 +40,9 @@ func main() {
 	}
 	// call this func to get undefined flags
 	exts := fuckflag.Extends()
-	fmt.Printf("fuckflag.Extends() size=%d, value=%v\n\n", len(exts), exts)
+	fmt.Printf("fuckflag.Extends() size=%d, value=%v\n", len(exts), exts)
+	// call this the check if a flag was passed
+	fmt.Printf("version.set=%v, echo.set=%v\n\n", fuckflag.IsSet("v"), fuckflag.IsSet("echo"))
 }
 ```
 
@@ -55,5 +57,6 @@ func main() {
 v0.0.1
 echo: hello
 fuckflag.Extends() size=3, value=[-undef --x -p=1]
+version.set=true, echo.set=true
 ```
 
