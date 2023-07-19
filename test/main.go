@@ -33,7 +33,8 @@ func runTest() {
 		println("echo: " + *echo)
 	}
 	exts := fuckflag.Extends()
-	fmt.Printf("fuckflag.Extends() size=%d, value=%v\n\n", len(exts), exts)
+	fmt.Printf("fuckflag.Extends() size=%d, value=%v\n", len(exts), exts)
+	fmt.Printf("version.set=%v, echo.set=%v\n\n", fuckflag.IsSet("v"), fuckflag.IsSet("echo"))
 	// reset
 	fuckflag.CommandLine = fuckflag.NewFlagSet(os.Args[0], fuckflag.ExitOnError)
 	version = fuckflag.Bool("v", false, "print version")
