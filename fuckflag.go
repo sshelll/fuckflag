@@ -454,6 +454,17 @@ func Set(name, value string) error {
 	return CommandLine.Set(name, value)
 }
 
+// IsSet returns whether the named flag is set.
+func (f *FlagSet) IsSet(name string) bool {
+	_, ok := f.actual[name]
+	return ok
+}
+
+// IsSet returns whether the named command-line flag is set.
+func IsSet(name string) bool {
+	return CommandLine.IsSet(name)
+}
+
 // isZeroValue determines whether the string represents the zero
 // value for a flag.
 func isZeroValue(flag *Flag, value string) (ok bool, err error) {
