@@ -42,7 +42,8 @@ func main() {
 	exts := fuckflag.Extends()
 	fmt.Printf("fuckflag.Extends() size=%d, value=%v\n", len(exts), exts)
 	// call this the check if a flag was passed
-	fmt.Printf("version.set=%v, echo.set=%v\n\n", fuckflag.IsSet("v"), fuckflag.IsSet("echo"))
+	vset, eset := fuckflag.IsSet("v"), fuckflag.IsSet("echo")
+	fmt.Printf("version.set=%v, echo.set=%v\n", vset, eset)
 }
 ```
 
